@@ -49,6 +49,7 @@ describe('Smoke Suite for the Community Application', function() {
   it('Test the LOGIN Functionality', function() {
 	  
 	LoginToApp();
+	browser.driver.sleep(3000);
 	var signOutLink = element(by.xpath("//a[text()='Logout']"));
 	signOutLink.click();
 	console.log('The User logged in successfully');	
@@ -69,14 +70,11 @@ describe('Smoke Suite for the Community Application', function() {
 	expect(contentInput.isPresent()).toEqual(true);
 	expect(saveButton.isPresent()).toEqual(true);
 	console.log('The Add Post page was available with the web elements successfully');
+	browser.driver.sleep(2000);
 	var signOutLink = element(by.xpath("//a[text()='Logout']"));
 	signOutLink.click();
   });
   
-  
-  
-  
-  
-  
+   
   
 });
