@@ -20,6 +20,8 @@ exports.config = {
   sauceUser: process.env.SAUCE_USERNAME,
   sauceKey: process.env.SAUCE_ACCESS_KEY,
 
+  console.log("---sauceUser---"+sauceUser);
+  console.log("---sauceKey---"+sauceKey);
   // Capabilities to be passed to the webdriver instance.
   capabilities: {
     browserName: 'chrome',
