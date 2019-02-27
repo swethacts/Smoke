@@ -29,6 +29,8 @@ sleep 5
 echo "Functional test cases execution staring ..."
 protractor protractor.conf.js
 
+echo process.env.SAUCE_USERNAME;
+echo process.env.SAUCE_ACCESS_KEY;
 #if [ $? -ne 0 ]; then  
 #	TEST_FAILURE=1
 #fi
