@@ -1,5 +1,5 @@
 
-// Tests for the sample REST APP - http://ec2-3-17-187-0.us-east-2.compute.amazonaws.com:3000/
+// Tests for the sample REST APP - http://10.120.101.126:3000/
 
 describe('Smoke Suite for the Community Application', function() {
 	
@@ -22,14 +22,15 @@ describe('Smoke Suite for the Community Application', function() {
 			passwordInput.sendKeys('test123');
 			OkButton.click();
 			browser.driver.sleep(3000);
-			expect(browser.getTitle()).toEqual('REST EXAMPLE APP');				
+			//expect(browser.getTitle()).toEqual('REST EXAMPLE APP');				
 			//var signOutLink = element(by.xpath("//a[text()='Logout']"));
 			//signOutLink.click();
 	}
 	
   it('Test the SignUp Page with Elements', function() {
 	  
-	var signUpButton = element(by.css('.btn.btn-lg.btn-success.ng-binding'));
+	browser.driver.sleep(3000);
+	var signUpButton = element(by.css('.btn.btn-lg.btn-success.ng-binding'));	
 	signUpButton.click();
 	browser.driver.sleep(3000);
 		var signupUsernameInput = element(by.id('username'));
@@ -49,7 +50,6 @@ describe('Smoke Suite for the Community Application', function() {
   it('Test the LOGIN Functionality', function() {
 	  
 	LoginToApp();
-	browser.driver.sleep(3000);
 	var signOutLink = element(by.xpath("//a[text()='Logout']"));
 	signOutLink.click();
 	console.log('The User logged in successfully');	
@@ -70,11 +70,14 @@ describe('Smoke Suite for the Community Application', function() {
 	expect(contentInput.isPresent()).toEqual(true);
 	expect(saveButton.isPresent()).toEqual(true);
 	console.log('The Add Post page was available with the web elements successfully');
-	browser.driver.sleep(2000);
 	var signOutLink = element(by.xpath("//a[text()='Logout']"));
 	signOutLink.click();
   });
   
-   
+  
+  
+  
+  
+  
   
 });
