@@ -9,10 +9,10 @@ pipeline {
 					slackSend color: "229954", message: "Starting *Smoke Testing* Job													"
 
 					sh 'echo "Creating Protractor Docker container..."'
-					slackSend color: "cceef9", message: "`Starting Smoke Tests on http://ec2-3-17-187-0.us-east-2.compute.amazonaws.com:3000` Job Details: ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+					slackSend color: "cceef9", message: "`Starting Smoke Tests -- Job Details: ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
 					slackSend color: "cceef9", message: "`Creating Protractor Docker container`"
 
-					sh 'echo "Starting Smoke Test Execution on http://ec2-3-17-187-0.us-east-2.compute.amazonaws.com:3000"'
+					sh 'echo "Starting Smoke Test Execution for the Sample Application."'
 
 					sh '''
 						chmod 777 ./ci/scripts/functional-test.sh
