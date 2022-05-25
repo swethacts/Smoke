@@ -8,7 +8,7 @@
    },
    "dependencies": {
       "assemble": "*",
-      "grunt": ">=0.4.5 <1.0.0",
+      "grunt": ">=0.4.5 <2.0.0",
       "grunt-contrib-clean": "*",
       "karma-viewport": "*"
    },
