@@ -31,7 +31,7 @@
       "jasmine-ajax": "*",
       "jasmine-core": "*",
       "jasmine-jquery": "*",
-      "jasmine-reporters": "^2.3.0",
+      "jasmine-reporters": "^2.5.0",
       "karma": "*",
       "karma-chrome-launcher": "*",
       "karma-cli": "*",
